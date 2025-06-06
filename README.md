@@ -55,6 +55,39 @@ int freqsRodada[50];
 int rodada = 0;
 ```
 
+A seguir, são as variáveis globais, indicam o controle dos leds, dos botões e buzzer.
+``` c++
+const int pinBotao1 = 6;
+const int pinBotao2 = 7;
+const int pinBotao3 = 8;
+const int pinBotao4 = 9;
+const int pinBuzzer = 10;
+const int pinLedVermelho = 2;
+const int pinLedAzul = 3;
+const int pinLedAmarelo = 4;
+const int pinLedVerde = 5;
+
+void setup()
+{
+  pinMode(pinLedVerde, OUTPUT);
+  pinMode(pinLedAzul, OUTPUT);
+  pinMode(pinLedVermelho, OUTPUT);
+  pinMode(pinLedAmarelo, OUTPUT);
+  pinMode(pinBuzzer, OUTPUT);
+  
+  pinMode(pinBotao1, INPUT_PULLUP);
+  pinMode(pinBotao2, INPUT_PULLUP);
+  pinMode(pinBotao3, INPUT_PULLUP);
+  pinMode(pinBotao4, INPUT_PULLUP);
+  
+  randomSeed(analogRead(A0));  
+  
+  lcd.init();               
+  lcd.backlight();          
+
+}
+```
+
 Para geração aleatória de sequência, os pins dos leds e suas frequências são armazenados em arrays de 4 posições. Dessa forma, é bem fácil gerar um índice aleatório de 0 a 3, e acessar uma posição na array:
 
 ``` c++
