@@ -1,4 +1,6 @@
 Projeto de arquitetura e organização de computadores II
+
+Código desenvolvido por Victor Alexandre Borges Milhomem
 # O que é o Jogo Genial?
 
 Projeto inspirado no jogo de memória Genius da Estrela. O jogo possui 4 leds: azul, vermelho, amarelo e verde. Cada led é associado a um botão com a mesma cor.
